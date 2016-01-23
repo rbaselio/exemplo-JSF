@@ -1,0 +1,25 @@
+		<h:outputText for="nome" value="Nome:"/>
+		<h:inputText id="nome" value="#{animal.nome}"/>
+		<br/>
+		
+		<h:selectOneMenu value="#{animal.especie}">
+   			<f:selectItem itemValue="1" itemLabel="canino" />
+   			<f:selectItem itemValue="2" itemLabel="felino" />
+   		</h:selectOneMenu>
+		
+		<br/>
+	    
+   		<h:selectOneMenu value="#{animal.especie}">
+   			<f:selectItems value="#{animal.especies}" />
+   		</h:selectOneMenu>
+		
+		<br/>
+		
+		<h:selectOneMenu value="#{animal.especie}">
+   			<f:selectItems value="#{animal.especies}" 
+   						   var="e"
+   						   itemLabel="#{e.description}"
+   						   itemValue="#{e.code}"/>
+   		</h:selectOneMenu>
+		
+		<h:commandButton value="Salvar" action="#{animal.salvar}"/>

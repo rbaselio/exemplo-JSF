@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class QuickSorter {
 
     public static void sort(Comparable[] array) {
